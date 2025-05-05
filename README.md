@@ -10,7 +10,7 @@ Atlas is a web-based application that provides real-time flood risk predictions 
 
 ## Technologies Used
 - **Frontend**: React, Material-UI, Framer Motion, Axios
-- **Backend**: Flask, MongoDB, Joblib (for AI models)
+- **Backend**: Flask, MongoDB, Python, Joblib (for AI models)
 - **Map Integration**: Leaflet.js
 - **Styling**: CSS
 

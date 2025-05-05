@@ -1,0 +1,110 @@
+/* Page container with background */
+.admin-page {
+  position: relative;
+  min-height: 100vh;
+  background: url("../assets/admin.png") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  overflow: hidden;
+}
+
+/* Overlay for better contrast */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(1.5px);
+  z-index: 1;
+  padding-bottom: 100px;
+}
+
+/* Glass-style login box */
+.admin-card {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 70px 40px;
+  max-width: 450px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Heading */
+.admin-heading {
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Inputs */
+.admin-input {
+  margin-bottom: 25px;
+}
+
+.admin-input label {
+  color: #cccccc;
+}
+
+.admin-input input {
+  color: white;
+}
+
+.admin-input .MuiOutlinedInput-root {
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.admin-input .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.admin-input .Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #00ff88;
+}
+
+/* Sign in button */
+.admin-button {
+  background-color: #006400 !important;
+  color: white;
+  font-weight: bold;
+  padding: 12px 24px;
+  padding-top: 10px;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  width: 70%;
+  max-width: 200px;
+  max-height: 100px;
+  margin: 20px auto 0;
+  display: block;
+}
+
+.admin-button:hover {
+  background-color: #004d00 !important;
+}
+
+/* Responsive layout */
+@media (max-width: 480px) {
+  .admin-card {
+    padding: 40px 20px;
+  }
+
+  .admin-heading {
+    font-size: 1.6rem;
+  }
+
+  .admin-button {
+    width: 100%;
+    max-width: none;
+  }
+}

@@ -1,0 +1,69 @@
+.navbar {
+  background-color: black !important;
+  padding: 0 20px;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px; /* Matches MUI default AppBar height */
+  padding: 0;
+}
+
+.app-name {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  height: 64px;
+  line-height: 64px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 30px;
+  width: 30px;
+  margin-right: 1px;
+  object-fit: contain;
+  position: relative;
+  top: -1px; /* ↓ moves down, negative ↑ moves up */
+}
+
+.logo-container-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.logo-container-link:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  height: 64px;
+}
+
+.nav-button {
+  color: white !important;
+  font-size: 1rem;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  height: 64px;
+  padding: 0 12px;
+  line-height: 64px;
+}
+
+.nav-button:hover {
+  color: #f5a623 !important;
+}

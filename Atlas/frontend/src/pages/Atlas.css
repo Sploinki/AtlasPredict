@@ -1,0 +1,278 @@
+
+  
+  /* ========== PRELOADER STYLING ========== */
+  .preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Overlay effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    /* animation: fadeOut 2.5s forwards 2s; */
+    z-index: 1000;
+  }
+  
+  /* ========== PRELOADER LOGO & TEXT ========== */
+  .preloader-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0rem;
+  }
+  
+  .preloader-logo {
+    width: 7rem;
+    height: auto;
+    opacity: 1;
+    margin-right: 0.5rem;
+    /* animation: fadeIn 1.2s ease-in-out forwards, fadeOut 0.8s 1.4s ease-in-out forwards; */
+  }
+  
+  .preloader-text {
+    font-size: 4.75rem;
+    font-weight: bold;
+    color: white;
+    opacity: 0;
+    /* animation: fadeIn 1.2s ease-in-out forwards, fadeOut 0.8s 1.4s ease-in-out forwards; */
+  }
+  
+  .preloader.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  /* ========== ANIMATIONS ========== */
+  /* @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  
+  @keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; visibility: hidden; }
+  } */
+  
+  /* ========== HEADER STYLES (LOGO & TITLE) ========== */
+  .logo-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: slideDownTogether 0.7s ease-out forwards 0.8s;
+    margin-bottom: -7px;
+  }
+  
+  .title-logo {
+    width: 3.5rem; /* Adjust based on text size */
+    height: auto;
+    opacity: 1;
+    margin-bottom: 17px; /* Slight adjustment to match text */
+  }
+  
+  .app-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 1rem;
+  }
+  
+  /* ========== TITLE & MAP ANIMATIONS ========== */
+  /* @keyframes slideDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+   */
+  .title-and-map {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(-50px);
+    /* animation: slideDownTogether 0.7s ease-out forwards 0.8s; */
+  }
+  
+  /* @keyframes slideDownTogether {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  } */
+  
+  /* ========== MAP STYLES ========== */
+  .leaflet-container {
+    width: 105vw;
+    max-width: 100%;
+    height: 89vh;
+    max-height: 89vh;
+    border-radius: 1.5rem;
+    transform: scale(0.95);
+
+    /* animation: fadeInScale 0.7s ease-out forwards 0.8s; */
+  }
+  
+  @keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+  }
+  
+  /* ========== MAP INTERACTIVE ELEMENTS ========== */
+  .leaflet-interactive:hover {
+    stroke: black;
+    stroke-width: 3px;
+    fill-opacity: 0 !important; /* Ensure complete transparency on hover */
+  }
+  
+  /* ========== CLUSTER ICONS ========== */
+  .cluster-icon {
+    background-color: #333;
+    height: 2em;
+    width: 2em;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    box-shadow: 0 0 5px #fff;
+  }
+  
+  /* ========== SEARCH BAR ========== */
+  /* ========== SEARCH BAR ========== */
+  :root {
+    --icon-size: 30px;
+    --expanded-width: 280px;
+    --main-color: #e9f1f4;
+    --search-bg: #1e1e1e;
+    --search-border: blue ;
+    --search-text: white;
+  }
+  
+  /* Center the search bar */
+  .search {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+  }
+  
+  /* SEARCH WRAPPER */
+  .search__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: var(--search-bg);
+    border: 2px solid var(--search-border);
+    border-radius: 25px;
+    padding: 8px 15px;
+    width: 90px; /* ✅ Adjust width to fit "Search" text */
+    transition: width 0.3s ease-in-out, background 0.3s ease-in-out;
+  }
+  
+  /* Expand when focused */
+  .search__wrapper.active {
+    width: var(--expanded-width);
+  }
+  
+  /* SEARCH FIELD */
+  .search__field {
+    flex-grow: 1;
+    height: var(--icon-size);
+    width: 100%; /* ✅ Ensures full width usage */
+    font-family: Lato, sans-serif;
+    font-size: 1.1em;
+    text-align: center; /* ✅ Center text */
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: var(--search-text);
+    transition: color 0.3s ease-in-out;
+    outline: none;
+  }
+  
+  /* SEARCH ICON */
+  .search__icon {
+    font-size: 1.4em;
+    color: var(--search-border);
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  /* Placeholder Styling */
+  .search__field::placeholder {
+    color: var(--search-text);
+    font-size: 0.9em;
+    transition: color 0.2s;
+  }
+  /* Align text to the left when typing */
+  .search__field:focus {
+    text-align: left;
+  }
+  
+  /* ========== WEATHER POPUP STYLING ========== */
+  .custom-popup .leaflet-popup-content-wrapper {
+    background: rgb(43, 43, 43) !important;
+    color: white !important;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+  
+  .custom-popup .leaflet-popup-content {
+    text-align: left;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .weather-popup {
+    padding: 10px;
+  }
+  
+  .weather-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: white;
+  }
+  
+  .weather-detail {
+    margin: 5px 0;
+    color: white;
+  }
+  
+  .weather-risk {
+    margin-top: 10px;
+    font-style: italic;
+  }
+  
+  .high-risk {
+    color: red;
+  }
+  
+  .medium-risk {
+    color: orange;
+  }
+  
+  .low-risk {
+    color: green;
+  }
+  

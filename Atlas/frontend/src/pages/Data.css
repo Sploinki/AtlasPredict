@@ -1,0 +1,82 @@
+/* Overall Section Styling */
+.data-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px 40px;
+  text-align: center;
+}
+
+/* Header Box */
+.header-box {
+  margin-bottom: 40px;
+}
+
+/* Title & Subtitle */
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #cccccc;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Data Source Cards Container */
+.data-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Individual Card Styling */
+.data-card {
+  width: 280px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 8px;
+  background: transparent !important;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white !important;
+  transition: transform 0.3s ease-in-out;
+}
+
+.data-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Text inside each card */
+.card-text {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  padding: 0 10px;
+  line-height: 1.4;
+}
+
+/* Flood Image Section */
+.image-container {
+  margin-top: 50px;
+  width: 100%;
+  max-height: 400px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.flood-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}

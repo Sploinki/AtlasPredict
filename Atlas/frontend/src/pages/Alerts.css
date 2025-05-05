@@ -1,0 +1,122 @@
+/* Container */
+.alert-container {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #1e1e1e 30%, #2a2a2a 100%);
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+    text-align: center;
+  }
+  
+  /* Header Section */
+  .header-box {
+    margin-bottom: 40px;
+  }
+  
+  .alert-header {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #006400;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+    margin-bottom: 10px;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+    color: #cccccc;
+    max-width: 1000px;
+    margin: 0 auto;
+    line-height: 1.6;
+    padding-left: 310px;
+  }
+  
+  /* Alert Box */
+  .alert {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Alert Variants */
+  .alert-info {
+    background: rgba(0, 123, 255, 0.2);
+    border-left: 5px solid #ffe600;
+    color: #ffffff;
+  }
+  
+  .alert-warning {
+    background: rgba(255, 69, 0, 0.8);
+    border-left: 5px solid #FF4500;
+    color: #ffffff;
+  }
+  
+  /* Hover Effect */
+  .alert:hover {
+    transform: scale(1.03);
+    box-shadow: 6px 6px 18px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Alert Content */
+  .alert-content {
+    flex-grow: 1;
+    text-align: left;
+  }
+  
+  .alert-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .alert-message {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* Close Button */
+  .close-btn {
+    background: none;
+    border: none;
+    color: #FFD700;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.3s, transform 0.2s;
+  }
+  
+  .close-btn:hover {
+    color: red;
+    transform: scale(1.2);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .alert-container {
+      width: 90%;
+      padding: 20px;
+    }
+  
+    .alert {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .alert-content {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  
+    .close-btn {
+      align-self: flex-end;
+    }
+  }
+  

@@ -5,7 +5,7 @@ import { MapContainer, TileLayer, GeoJSON, Popup, useMap, useMapEvents } from "r
 import provinceBoundaries from "./data/provinceBoundaries.json"; 
 import axios from "axios";  // Import Axios
 
-const API_KEY = "8b8a90beebac9973b9ed1fa4db559ca8";
+const API_KEY = "";
 
 
 // Function to send data to Flask and get prediction
